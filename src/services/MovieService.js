@@ -1,6 +1,8 @@
 const env = require("../components/env");
 const config = require("../components/apiConfig")[env];
 const token = config.bearer_token;
+import { searchMovie } from "../services/MovieService";
+
 export async function getAllMovies() {
   try {
     const response = await fetch(config.API_URL + "/api/movie/all", {
