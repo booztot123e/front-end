@@ -1,5 +1,5 @@
-import { env } from "../env.js";
-import { apiConfig } from "../apiConfig.js";
+const apiConfig = require("../components/apiConfig.js")[env];
+const env = require("../components/env.js");
 
 export async function searchMovie(search_data) {
   try {
