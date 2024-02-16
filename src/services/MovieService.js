@@ -30,7 +30,7 @@ export async function createMovie(data) {
   }
 }
 
-export async function getMovieSearch(search_text) {
+export async function searchMovie(search_text) {
   try {
     const response = await fetch(
       `${config.API_URL}/api/movie/search?search_text=${search_text}`,
